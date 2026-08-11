@@ -154,7 +154,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex gap-5 flex-col'>
+                        <div className='flex gap-3 flex-col'>
                             {cards.map((card, i) => {
                                 const progress = step - i * 3;
 
@@ -218,11 +218,16 @@ const Home = () => {
                                     </>
                                 )}
                             </div>
-                            <div className='flex justify-center items-center'>
-                                <button>CI/CD</button>
-                                <button>Staging</button>
-                                <button>Rollback</button>
-                                <button>Monitoring</button>
+                            <div className='flex justify-center items-center flex-col'>
+                                <p>
+                                    We treat every failure as feedback for the next breakthrough.
+                                </p>
+                                <div className='flex gap-3 mt-3'>
+                                    <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>CI/CD</button>
+                                    <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Staging</button>
+                                    <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Rollback</button>
+                                    <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Monitoring</button>
+                                </div>
                             </div>
                         </div>
                     </div>
