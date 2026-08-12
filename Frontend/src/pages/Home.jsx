@@ -9,6 +9,9 @@ import { TbPackages } from "react-icons/tb";
 import { LuTestTube } from "react-icons/lu";
 import { MdRocketLaunch } from "react-icons/md";
 import { FaArrowDown } from "react-icons/fa";
+import About from './About';
+import Services from './Services';
+import Testimonies from './Testimonies';
 
 const status = [
     {
@@ -76,7 +79,7 @@ const Home = () => {
         <div className='h-full mb-50'>
             <div className='py-60 px-40'>
                 <p>SOFTWARE CRAFTING...</p>
-                <h1 className='font-medium text-6xl leading-15 py-5'>
+                <h1 className='font-medium text-5xl leading-15 py-5'>
                     Crafting scalable digital products <br />
                     with engineering excellence.
                 </h1>
@@ -94,8 +97,8 @@ const Home = () => {
             <div className='dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A]'>
                 <div className='py-30 px-40'>
                     <div className='mb-30'>
-                        <p>JUST TRUST THE PROCESS</p>
-                        <h1 className='font-medium text-6xl leading-15 py-5'>
+                        <p>JUST TRUST THE PROCESS...</p>
+                        <h1 className='font-medium text-5xl leading-15 py-5'>
                             Delivering exceptional products <br /> goes beyond writing code.
                         </h1>
                         <p className='leading-7 mb-10'>
@@ -117,7 +120,7 @@ const Home = () => {
                                     </p>
                                 </div>
                             </div>
-                            <hr className='border-gray-200' />
+                            <hr className='dark:border-gray-200 border-gray-600' />
                             <div className='flex items-start justify-center gap-5'>
                                 <button className='border p-2 rounded-sm'>
                                     <HiCheck />
@@ -129,7 +132,7 @@ const Home = () => {
                                     </p>
                                 </div>
                             </div>
-                            <hr className='border-gray-200' />
+                            <hr className='dark:border-gray-200 border-gray-600' />
                             <div className='flex items-start justify-center gap-5'>
                                 <button className='border p-2 rounded-sm'>
                                     <HiCheck />
@@ -141,7 +144,7 @@ const Home = () => {
                                     </p>
                                 </div>
                             </div>
-                            <hr className='border-gray-200' />
+                            <hr className='dark:border-gray-200 border-gray-600' />
                             <div className='flex items-start justify-center gap-5'>
                                 <button className='border p-2 rounded-sm'>
                                     <HiCheck />
@@ -198,7 +201,6 @@ const Home = () => {
                                             {card.arrow}
                                         </div>
                                     </div>
-
                                 );
                             })}
                             <div className="flex items-center justify-center gap-3">
@@ -220,7 +222,7 @@ const Home = () => {
                             </div>
                             <div className='flex justify-center items-center flex-col'>
                                 <p>
-                                    We treat every failure as feedback for the next breakthrough.
+                                    Refine. Rebuild. Repeat.
                                 </p>
                                 <div className='flex gap-3 mt-3'>
                                     <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>CI/CD</button>
@@ -233,6 +235,9 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <About />
+            <Services />
+            <Testimonies />
         </div>
     )
 }
