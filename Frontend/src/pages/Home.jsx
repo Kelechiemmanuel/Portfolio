@@ -70,7 +70,7 @@ const Home = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setStep((prev) => (prev + 1) % 12);
-        }, 3000);
+        }, 2000);
 
         return () => clearInterval(interval);
     }, []);

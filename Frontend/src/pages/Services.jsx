@@ -107,41 +107,44 @@ const Services = () => {
         setOpen(open === id ? null : id)
     }
     return (
-        <div className='h-full w-full dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A] px-40 py-40'>
-            <p>SERVICES...</p>
-            <div className='grid grid-cols-2 gap-40'>
-                <div>
+        <div className='h-full w-full dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A]'>
+            <div className='px-40 py-40'>
+                <p>SERVICES...</p>
+                <div className='grid grid-cols-2 gap-40'>
                     <div>
-                        <h1 className='font-medium text-5xl leading-15 py-5'>
-                            Every great product starts as an idea. We engineer the impact.
-                        </h1>
-                        <p>Custom engineering, not cookie-cutter development. Every engagement <br />is built around your goals.</p>
-                    </div>
-                    <div className='flex gap-2 w-full pt-5'>
-                        <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Mobile Apps</button>
-                        <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Web Platforms</button>
-                        <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Cloud Migration</button>
-                        <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Ai Automation</button>
-                        <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Brand Strategy</button>
-                    </div>
-                </div>
-                <div className='flex flex-col gap-5'>
-                    {items.map((item, id) => (
-                        <div key={item.id} onClick={() => handleDropDown(item.id)} className='dark:border-gray-300 border-gray-600 border-b pb-5'>
-                            <div className='flex justify-between'>
-                                <div className='flex gap-5 items-center'>
-                                    <p>{item.serial}</p>
-                                    <p>{item.title}</p>
-                                </div>
-                                <LuChevronDown className={`transition-transform ${open === item.id ? "rotate-180" : ""}`} />
-                            </div>
-                            <div className={`overflow-hidden pl-10 transition-all duration-500 ease-in-out ${open === item.id ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0"}`}>
-                                {item.description}
-                            </div>
+                        <div>
+                            <h1 className='font-medium text-5xl leading-15 py-5'>
+                                Every great product starts as an idea. We engineer the impact.
+                            </h1>
+                            <p>Custom engineering, not cookie-cutter development. Every engagement <br />is built around your goals.</p>
                         </div>
-                    ))}
+                        <div className='flex gap-2 w-full pt-5'>
+                            <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Mobile Apps</button>
+                            <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Web Platforms</button>
+                            <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Cloud Migration</button>
+                            <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Ai Automation</button>
+                            <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Brand Strategy</button>
+                        </div>
+                    </div>
+                    <div className='flex flex-col gap-5'>
+                        {items.map((item, id) => (
+                            <div key={item.id} onClick={() => handleDropDown(item.id)} className='dark:border-gray-300 border-gray-600 border-b pb-5'>
+                                <div className='flex justify-between'>
+                                    <div className='flex gap-5 items-center'>
+                                        <p>{item.serial}</p>
+                                        <p>{item.title}</p>
+                                    </div>
+                                    <LuChevronDown className={`transition-transform ${open === item.id ? "rotate-180" : ""}`} />
+                                </div>
+                                <div className={`overflow-hidden pl-10 transition-all duration-500 ease-in-out ${open === item.id ? "max-h-full opacity-100 mt-2" : "max-h-0 opacity-0"}`}>
+                                    {item.description}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
+            <hr className='dark:border-gray-300 border-gray-600' />
         </div>
     )
 }
