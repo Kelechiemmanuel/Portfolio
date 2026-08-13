@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { LuChevronDown } from "react-icons/lu";
+import crystal from '../assets/crystal.png'
 import { FaArrowRight } from 'react-icons/fa';
 
 const items = [
@@ -122,7 +123,7 @@ const Services = () => {
                             <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Mobile Apps</button>
                             <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Web Platforms</button>
                             <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Cloud Migration</button>
-                            <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Ai Automation</button>
+                            <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>AI Automation</button>
                             <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Brand Strategy</button>
                         </div>
                     </div>
@@ -141,6 +142,49 @@ const Services = () => {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+                <div>
+                    <div className='pt-20'>
+                        <p>CASE STUDY...</p>
+                        <div className=''>
+                            <h1 className='font-medium text-5xl leading-15 py-5'>
+                                Selected Work
+                            </h1>
+                            <p>Custom engineering, not cookie-cutter development. <br />Every engagement is built around your goals.</p>
+                        </div>
+                    </div>
+                    <div className='grid grid-cols-3 gap-5 mt-10'>
+                        <div className=''>
+                            <div className='dark:border-gray-300 border-gray-600 border rounded-2xl'>
+                                <img src={crystal} alt="" className='rounded-2xl' />
+                            </div>
+                            <div className='py-5'>
+                                <p>May 2026 <label>.  Engineering</label></p>
+                                <h2 className='font-medium text-2xl py-2'>Custom engineering, not cookie-cutter development.</h2>
+                                <p>Custom engineering, not cookie-cutter development. Every engagement is built around your goals.</p>
+                            </div>
+                        </div>
+                        <div className=''>
+                            <div className='dark:border-gray-300 border-gray-600 border rounded-2xl'>
+                                <img src={crystal} alt="" className='rounded-2xl' />
+                            </div>
+                            <div className='py-5'>
+                                <p>May 2026 <label>.  Engineering</label></p>
+                                <h2 className='font-medium text-2xl py-2'>Custom engineering, not cookie-cutter development.</h2>
+                                <p>Custom engineering, not cookie-cutter development. Every engagement is built around your goals.</p>
+                            </div>
+                        </div>
+                        <div className=''>
+                            <div className='dark:border-gray-300 border-gray-600 border rounded-2xl'>
+                                <img src={crystal} alt="" className='rounded-2xl' />
+                            </div>
+                            <div className='py-5'>
+                                <p>May 2026 <label>.  Engineering</label></p>
+                                <h2 className='font-medium text-2xl py-2'>Custom engineering, not cookie-cutter development.</h2>
+                                <p>Custom engineering, not cookie-cutter development. Every engagement is built around your goals.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
