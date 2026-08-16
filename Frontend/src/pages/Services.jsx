@@ -119,7 +119,7 @@ const Services = () => {
                             </h1>
                             <p>Custom engineering, not cookie-cutter development. Every engagement <br />is built around your goals.</p>
                         </div>
-                        <div className='flex gap-2 w-full pt-5'>
+                        <div className='md:flex gap-2 w-full pt-5 hidden '>
                             <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Mobile Apps</button>
                             <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Web Platforms</button>
                             <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Cloud Migration</button>
