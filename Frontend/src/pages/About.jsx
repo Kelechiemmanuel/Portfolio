@@ -15,11 +15,11 @@ const About = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
                     <div className=''>
                         <div>
-                            <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>Built with conviction. <br />
+                            <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>Built with conviction. <br className='hidden md:block' />
                                 Shipped with confidence.
                             </h1>
                             <p>
-                                We work with founders and growing businesses that value speed, quality, and long-term <br />impact.
+                                We work with founders and growing businesses that value speed, quality, and long-term <br className='hidden md:block' />impact.
                                 Most agencies deliver projects—we engineer products built to scale.
                             </p>
                         </div>
@@ -40,7 +40,7 @@ const About = () => {
                     <div>
                         <h2 className='text-xl font-bold leading-15'>Every detail has a purpose.</h2>
                         <p>
-                            We've removed the barriers between vision and execution. Every decision, every <br />
+                            We've removed the barriers between vision and execution. Every decision, every <br className='hidden md:block' />
                             sprint, and every deployment is focused on building software that creates lasting business value.
                         </p>
                         <hr className='border-gray-300 dark:border-gray-600 my-10' />
@@ -49,7 +49,7 @@ const About = () => {
                             <div>
                                 <h2 className='text-lg font-bold leading-15 py-2'>Built for Velocity</h2>
                                 <p>
-                                    We optimize every engineering investment to deliver greater velocity, <br />
+                                    We optimize every engineering investment to deliver greater velocity, <br className='hidden md:block' />
                                     stronger products, and sustainable growth
                                 </p>
                             </div>

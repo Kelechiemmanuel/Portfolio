@@ -85,7 +85,7 @@ const Home = () => {
                 </h1>
                 <p className='leading-7 mb-10'>
                     From strategy to deployment, we transform ambitious ideas into polished digital
-                    experiences <br /> built for performance, scalability, and growth. Obsess over the details that most people never notice— <br />
+                    experiences <br className='hidden md:block' /> built for performance, scalability, and growth. Obsess over the details that most people never notice— <br className='hidden md:block' />
                     because those details create products that users never forget.
                 </p>
                 <div className='flex items-start flex-col lg:flex-row gap-4 group'>
@@ -102,8 +102,8 @@ const Home = () => {
                             Delivering exceptional products <br /> goes beyond writing code.
                         </h1>
                         <p className='leading-7 mb-10'>
-                            Thoughtfully engineered software, built to scale and designed to last.<br />
-                            From concept to launch, we create scalable web applications engineered and long-term growth.<br />
+                            Thoughtfully engineered software, built to scale and designed to last.<br className='hidden md:block' />
+                            From concept to launch, we create scalable web applications engineered and long-term growth.<br className='hidden md:block' />
                             We build production-ready applications that balance exceptional user experiences with robust engineering.
                         </p>
                     </div>

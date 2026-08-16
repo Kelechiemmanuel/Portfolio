@@ -117,7 +117,7 @@ const Services = () => {
                             <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>
                                 Every great product starts as an idea. We engineer the impact.
                             </h1>
-                            <p>Custom engineering, not cookie-cutter development. Every engagement <br />is built around your goals.</p>
+                            <p>Custom engineering, not cookie-cutter development. Every engagement <br className='hidden md:block' />is built around your goals.</p>
                         </div>
                         <div className='md:flex gap-2 w-full pt-5 hidden '>
                             <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Mobile Apps</button>
@@ -151,7 +151,7 @@ const Services = () => {
                             <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>
                                 Selected Work
                             </h1>
-                            <p>Custom engineering, not cookie-cutter development. <br />Every engagement is built around your goals.</p>
+                            <p>Custom engineering, not cookie-cutter development. <br className='hidden md:block' />Every engagement is built around your goals.</p>
                         </div>
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10'>
