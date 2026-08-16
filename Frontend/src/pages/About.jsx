@@ -35,7 +35,9 @@ const About = () => {
                                 <p>Global Client</p>
                             </div>
                         </div>
-                        <Booking />
+                        <div className='flex justify-center lg:justify-start'>
+                            <Booking />
+                        </div>
                     </div>
                     <div>
                         <h2 className='text-xl font-bold leading-15'>Every detail has a purpose.</h2>
