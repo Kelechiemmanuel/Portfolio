@@ -88,12 +88,12 @@ const Home = () => {
                     experiences <br className='hidden md:block' /> built for performance, scalability, and growth. Obsess over the details that most people never notice— <br className='hidden md:block' />
                     because those details create products that users never forget.
                 </p>
-                <div className='flex items-start flex-col lg:flex-row gap-4 group'>
+                <div className='flex items-start lg:flex-row gap-4 group'>
                     <Booking />
-                    {/* <div className='flex items-center gap-5'> */}
-                    <button className=''>Let it work for you </button>
-                    <FaArrowRight className='transition-transform duration-300 group-hover:translate-x-2' />
-                    {/* </div> */}
+                    <div className='flex items-center gap-5'>
+                        <button className=''>Let it work for you </button>
+                        <FaArrowRight className='transition-transform duration-300 group-hover:translate-x-2' />
+                    </div>
                 </div>
             </div>
             <div className='dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A]'>
