@@ -90,10 +90,10 @@ const Home = () => {
                 </p>
                 <div className='flex items-start flex-col lg:flex-row gap-4 group'>
                     <Booking />
-                    <div className='flex items-center gap-5'>
-                        <button className=''>Let it work for you </button>
-                        <FaArrowRight className='transition-transform duration-300 group-hover:translate-x-2' />
-                    </div>
+                    {/* <div className='flex items-center gap-5'> */}
+                    <button className=''>Let it work for you </button>
+                    <FaArrowRight className='transition-transform duration-300 group-hover:translate-x-2' />
+                    {/* </div> */}
                 </div>
             </div>
             <div className='dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A]'>
