@@ -30,7 +30,7 @@ const Navbar = () => {
                     </button>
                     {menu && (
                         <div className='fixed left-0 top-0 w-full'>
-                            <div className='w-full relative bg-white dark:bg-[#0F172A]'>
+                            <div className='h-screen w-full relative bg-white dark:bg-[#0F172A]'>
                                 <button onClick={() => setMenu(false)} className='absolute right-10 top-5'>
                                     <FiX size={24} />
                                 </button>
