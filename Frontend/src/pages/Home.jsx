@@ -76,11 +76,11 @@ const Home = () => {
     }, []);
     const activeCard = Math.floor(step / 3);
     return (
-        <div className='h-full mb-50'>
-            <div className='py-60 px-40'>
+        <div className='h-full mb-50 flex flex-col'>
+            <div className='px-10 py-35 lg:py-55 lg:px-40'>
                 <p>SOFTWARE CRAFTING...</p>
-                <h1 className='font-medium text-5xl leading-15 py-5'>
-                    Crafting scalable digital products <br />
+                <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>
+                    Crafting scalable digital products <br className='hidden md:block' />
                     with engineering excellence.
                 </h1>
                 <p className='leading-7 mb-10'>
@@ -88,17 +88,17 @@ const Home = () => {
                     experiences <br /> built for performance, scalability, and growth. Obsess over the details that most people never notice— <br />
                     because those details create products that users never forget.
                 </p>
-                <div className='flex items-center gap-4 group'>
+                <div className='flex items-start flex-col lg:flex-row gap-4 group'>
                     <Booking />
                     <button className=''>Let it work for you </button>
                     <FaArrowRight className='transition-transform duration-300 group-hover:translate-x-2' />
                 </div>
             </div>
             <div className='dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A]'>
-                <div className='py-30 px-40'>
+                <div className='px-10 py-40 lg:py-40 lg:px-40'>
                     <div className='mb-30'>
                         <p>JUST TRUST THE PROCESS...</p>
-                        <h1 className='font-medium text-5xl leading-15 py-5'>
+                        <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>
                             Delivering exceptional products <br /> goes beyond writing code.
                         </h1>
                         <p className='leading-7 mb-10'>
@@ -107,7 +107,7 @@ const Home = () => {
                             We build production-ready applications that balance exceptional user experiences with robust engineering.
                         </p>
                     </div>
-                    <div className='grid grid-cols-2 gap-20'>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-20'>
                         <div className=' flex flex-col gap-10'>
                             <div className='flex items-start justify-center gap-5'>
                                 <button className='border p-2 rounded-sm'>
@@ -157,7 +157,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex gap-3 flex-col'>
+                        <div className='gap-3 flex-col lg:flex hidden'>
                             {cards.map((card, i) => {
                                 const progress = step - i * 3;
 

@@ -12,7 +12,7 @@ import Blog from './pages/Blog'
 
 const App = () => {
   return (
-    <div className='min-h-screen bg-white text-gray-900 dark:bg-[#0F172A] dark:text-gray-100 transition-colors duration-300'>
+    <div className=' bg-white text-gray-900 dark:bg-[#0F172A] dark:text-gray-100 transition-colors duration-300'>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />

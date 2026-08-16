@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { FiSun } from "react-icons/fi";
+import { RiMoonFill } from "react-icons/ri";
 
 const ThemeToggle = () => {
     const [dark, setDark] = useState(false)
@@ -8,7 +10,7 @@ const ThemeToggle = () => {
     }, [dark])
     return (
         <button onClick={() => setDark(!dark)}>
-            {dark ? "☀️" : "🌙"}
+            {dark ? <FiSun /> : <RiMoonFill />}
         </button>
     )
 }

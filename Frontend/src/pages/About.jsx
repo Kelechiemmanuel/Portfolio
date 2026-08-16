@@ -10,12 +10,12 @@ const About = () => {
     const navigate = useNavigate()
     return (
         <div className='h-full'>
-            <div className='py-50 px-40 items-center'>
+            <div className='px-10 py-35 lg:py-40 lg:px-40'>
                 <p>OUR MISSION...</p>
-                <div className='grid grid-cols-2 gap-30'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
                     <div className=''>
                         <div>
-                            <h1 className='font-medium text-5xl leading-15 py-5'>Built with conviction. <br />
+                            <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>Built with conviction. <br />
                                 Shipped with confidence.
                             </h1>
                             <p>
@@ -38,28 +38,34 @@ const About = () => {
                         <Booking />
                     </div>
                     <div>
-                        <h2 className='text-xl font-bold leading-15 py-5'>Every detail has a purpose.</h2>
+                        <h2 className='text-xl font-bold leading-15'>Every detail has a purpose.</h2>
                         <p>
                             We've removed the barriers between vision and execution. Every decision, every <br />
                             sprint, and every deployment is focused on building software that creates lasting business value.
                         </p>
                         <hr className='border-gray-300 dark:border-gray-600 my-10' />
 
-                        <h2 className='text-lg font-bold leading-15 py-2'>Built for Velocity</h2>
-                        <p>
-                            We optimize every engineering investment to deliver greater velocity, <br />
-                            stronger products, and sustainable growth
-                        </p>
-                        <h2 className='text-lg font-bold leading-15 py-2'>Scalability by Design</h2>
-                        <p>
-                            Resilient architecture that adapts to increasing demand without compromising performance.
-                        </p>
+                        <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
+                            <div>
+                                <h2 className='text-lg font-bold leading-15 py-2'>Built for Velocity</h2>
+                                <p>
+                                    We optimize every engineering investment to deliver greater velocity, <br />
+                                    stronger products, and sustainable growth
+                                </p>
+                            </div>
+                            <div>
+                                <h2 className='text-lg font-bold leading-15 py-2'>Scalability by Design</h2>
+                                <p>
+                                    Resilient architecture that adapts to increasing demand without compromising performance.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className='dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A] h-full px-40 py-30'>
-                <div className='grid grid-cols-3 gap-5'>
+            <div className='dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A] h-full px-10 py-20 lg:py-40 lg:px-40'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                     <div className='dark:border-gray-300 border-gray-600 border p-10 rounded-2xl'>
                         <LuNetwork className='text-4xl bg-white dark:bg-[#0F172A] p-2 rounded-sm dark:text-white text-[#0F172A]' />
                         <h2 className='text-lg font-medium mt-6 mb-2'>Every detail has a purpose.</h2>

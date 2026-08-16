@@ -109,12 +109,12 @@ const Services = () => {
     }
     return (
         <div className='h-full w-full dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A]'>
-            <div className='px-40 py-40'>
+            <div className='px-10 py-35 lg:py-60 lg:px-40'>
                 <p>SERVICES...</p>
-                <div className='grid grid-cols-2 gap-40'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-30'>
                     <div>
                         <div>
-                            <h1 className='font-medium text-5xl leading-15 py-5'>
+                            <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>
                                 Every great product starts as an idea. We engineer the impact.
                             </h1>
                             <p>Custom engineering, not cookie-cutter development. Every engagement <br />is built around your goals.</p>
@@ -148,16 +148,16 @@ const Services = () => {
                     <div className='pt-20'>
                         <p>CASE STUDY...</p>
                         <div className=''>
-                            <h1 className='font-medium text-5xl leading-15 py-5'>
+                            <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>
                                 Selected Work
                             </h1>
                             <p>Custom engineering, not cookie-cutter development. <br />Every engagement is built around your goals.</p>
                         </div>
                     </div>
-                    <div className='grid grid-cols-3 gap-5 mt-10'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10'>
                         <div className=''>
-                            <div className='dark:border-gray-300 border-gray-600 border rounded-2xl'>
-                                <img src={crystal} alt="" className='rounded-2xl' />
+                            <div className='dark:border-gray-300 border-gray-600 border rounded-2xl w-full'>
+                                <img src={crystal} alt="" className='rounded-2xl w-full' />
                             </div>
                             <div className='py-5'>
                                 <p>May 2026 <label>.  Engineering</label></p>
@@ -167,7 +167,7 @@ const Services = () => {
                         </div>
                         <div className=''>
                             <div className='dark:border-gray-300 border-gray-600 border rounded-2xl'>
-                                <img src={crystal} alt="" className='rounded-2xl' />
+                                <img src={crystal} alt="" className='rounded-2xl w-full' />
                             </div>
                             <div className='py-5'>
                                 <p>May 2026 <label>.  Engineering</label></p>
@@ -177,7 +177,7 @@ const Services = () => {
                         </div>
                         <div className=''>
                             <div className='dark:border-gray-300 border-gray-600 border rounded-2xl'>
-                                <img src={crystal} alt="" className='rounded-2xl' />
+                                <img src={crystal} alt="" className='rounded-2xl w-full' />
                             </div>
                             <div className='py-5'>
                                 <p>May 2026 <label>.  Engineering</label></p>

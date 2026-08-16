@@ -3,11 +3,11 @@ import { FaStar } from "react-icons/fa";
 
 const Testimonies = () => {
     return (
-        <div className='h-full w-full dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A] px-40 py-40'>
-            <div className='flex justify-center items-center gap-30'>
+        <div className='h-full w-full dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A]  px-10 py-35 lg:py-50 lg:px-40'>
+            <div className='flex flex-col gap-30'>
                 <div className='w-[60%]'>
                     <p>TESTIMONIES...</p>
-                    <h1 className='font-medium text-5xl leading-15 py-5'>Built for Scale</h1>
+                    <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>Built for Scale</h1>
                     <p>Built to perform. Proven in production.</p>
                     <hr className='dark:border-gray-300 border-gray-600 my-10' />
                     <div className='flex gap-10 items-center justify-start mb-10'>
@@ -22,7 +22,7 @@ const Testimonies = () => {
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-cols-2 gap-5'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                     <div className='dark:border-gray-300 border-gray-600 border p-10 rounded-2xl'>
                         <div className='flex items-center gap-2 mt-6 mb-5'>
                             <FaStar />
