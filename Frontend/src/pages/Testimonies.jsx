@@ -5,7 +5,7 @@ const Testimonies = () => {
     return (
         <div className='h-full w-full dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A]  px-10 py-35 lg:py-50 lg:px-40'>
             <div className='flex flex-col lg:flex-row gap-30'>
-                <div className='w-[60%]'>
+                <div className='w-full'>
                     <p>TESTIMONIES...</p>
                     <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>Built for Scale</h1>
                     <p>Built to perform. Proven in production.</p>
