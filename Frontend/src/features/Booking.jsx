@@ -155,7 +155,7 @@ const Booking = () => {
 
                         <div className='absolute inset-y-0 right-0 w-full sm:max-w-xl'>
                             <div className='h-screen w-full bg-white dark:bg-[#0F172A] rounded-l-2xl relative overflow-y-auto text-[#0F172A] dark:text-white'>
-                                <button className='absolute right-5 top-5 z-10 w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 dark:border-gray-700 cursor-pointer' onClick={closeModal}>×</button>
+                                <button className='absolute right-5 top-5 z-10 w-8 h-8 flex items-center cursor-pointer justify-center rounded-full border border-gray-300 dark:border-gray-700 cursor-pointer' onClick={closeModal}>×</button>
 
                                 <div className='p-6 sm:p-8'>
                                     <div className='mb-6'>
@@ -176,7 +176,7 @@ const Booking = () => {
                                             <div className='text-sm'>{formatLong(confirmed.dateObj)} at {formatSlotLabel(selectedTime)}</div>
                                             <div className='text-sm'>{confirmed.duration_minutes} min — {confirmed.name}</div>
                                             <div className='text-xs text-gray-500 dark:text-gray-400 mt-2 mb-4'>A calendar invite will be sent to {confirmed.email}.</div>
-                                            <button onClick={resetBooking} className='border border-gray-800 dark:border-gray-300 py-2 px-4 rounded-sm text-sm font-bold'>Book another slot</button>
+                                            <button onClick={resetBooking} className='border border-gray-800 dark:border-gray-300 py-2 px-4 cursor-pointer rounded-sm text-sm font-bold'>Book another slot</button>
                                         </div>
                                     ) : (
                                         <>
@@ -186,7 +186,7 @@ const Booking = () => {
                                                     <button
                                                         key={d.id}
                                                         onClick={() => setDuration(d.id)}
-                                                        className={`flex-1 text-left px-3 py-2 rounded-lg border text-sm
+                                                        className={`flex-1 text-left px-3 py-2 rounded-lg border text-sm cursor-pointer
                                                             ${duration === d.id
                                                                 ? 'border-[#0F172A] dark:border-white bg-gray-100 dark:bg-gray-800'
                                                                 : 'border-gray-200 dark:border-gray-700'}`}
@@ -199,9 +199,9 @@ const Booking = () => {
 
                                             <div className='border border-gray-200 dark:border-gray-700 rounded-xl p-4 mb-5'>
                                                 <div className='flex items-center justify-between mb-3'>
-                                                    <button onClick={() => setViewDate(addMonths(viewDate, -1))} className='w-7 h-7 rounded-full border border-gray-300 dark:border-gray-600'>‹</button>
+                                                    <button onClick={() => setViewDate(addMonths(viewDate, -1))} className='w-7 h-7 rounded-full border cursor-pointer border-gray-300 dark:border-gray-600'>‹</button>
                                                     <span className='font-bold text-sm'>{MONTH_NAMES[viewDate.getMonth()]} {viewDate.getFullYear()}</span>
-                                                    <button onClick={() => setViewDate(addMonths(viewDate, 1))} className='w-7 h-7 rounded-full border border-gray-300 dark:border-gray-600'>›</button>
+                                                    <button onClick={() => setViewDate(addMonths(viewDate, 1))} className='w-7 h-7 rounded-full border cursor-pointer border-gray-300 dark:border-gray-600'>›</button>
                                                 </div>
                                                 <div className='grid grid-cols-7 gap-1 mb-1'>
                                                     {DAY_LABELS.map(d => <span key={d} className='text-[10px] text-center font-bold text-gray-500 dark:text-gray-400'>{d}</span>)}
@@ -218,7 +218,7 @@ const Booking = () => {
                                                                     key={di}
                                                                     disabled={disabled}
                                                                     onClick={() => pickDate(day)}
-                                                                    className={`h-9 rounded-md text-xs font-semibold flex flex-col items-center justify-center gap-0.5
+                                                                    className={`h-9 rounded-md text-xs font-semibold flex flex-col items-center justify-center gap-0.5 cursor-pointer
                                                                         ${disabled ? 'text-gray-300 dark:text-gray-600' : ''}
                                                                         ${selected ? 'bg-[#0F172A] text-white dark:bg-[#0F172A] dark:text-[#0F172A]' : ''}`}
                                                                 >
@@ -250,7 +250,7 @@ const Booking = () => {
                                                             key={slot.time}
                                                             disabled={slot.is_booked}
                                                             onClick={() => setSelectedTime(slot.time)}
-                                                            className={`flex items-center gap-2 px-3 py-2 rounded-md text-xs font-mono text-left
+                                                            className={`flex items-center gap-2 px-3 py-2 rounded-md text-xs font-mono text-left cursor-pointer
                                                                 ${slot.is_booked ? 'text-gray-600' : 'text-gray-200'}
                                                                 ${selectedTime === slot.time ? 'bg-white/10 text-white' : ''}`}
                                                         >
