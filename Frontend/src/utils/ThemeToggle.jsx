@@ -9,7 +9,7 @@ const ThemeToggle = () => {
         document.documentElement.classList.toggle("dark", dark)
     }, [dark])
     return (
-        <button onClick={() => setDark(!dark)}>
+        <button onClick={() => setDark(!dark)} className='cursor-pointer'>
             {dark ? <FiSun /> : <RiMoonFill />}
         </button>
     )
