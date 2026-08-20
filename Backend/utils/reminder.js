@@ -1,11 +1,8 @@
 const cron = require('node-cron');
 const pool = require('../config/db');
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function sendReminders() {
     const { rows } = await pool.query(`
@@ -19,12 +16,17 @@ async function sendReminders() {
 
     for (const booking of rows) {
         try {
-            await transporter.sendMail({
-                from: `"Kelechi" <${process.env.EMAIL_USER}>`,
+            const result = await resend.emails.send({
+                from: 'Kelechi <onboarding@resend.dev>',
                 to: booking.email,
                 subject: `Reminder: your session in about an hour`,
                 text: `Hi ${booking.name},\n\nJust a reminder — your ${booking.duration_minutes}-minute session is coming up at ${booking.time} on ${booking.date}.\n\nSee you soon.`,
             });
+
+            if (result.error) {
+                console.error(`Resend error for booking ${booking.id}:`, result.error);
+                continue; // don't mark as sent if it actually failed
+            }
 
             await pool.query(`UPDATE bookings SET reminder_sent = TRUE WHERE id = $1`, [booking.id]);
         } catch (err) {
