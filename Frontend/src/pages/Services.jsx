@@ -85,7 +85,7 @@ const items = [
     {
         id: 5,
         serial: "05",
-        titles: "Brand Positioning",
+        title: "Brand Positioning",
         description: <div>
             <p className='pb-10'>SvelteKit for applications that need to be fast by default. Server-side rendering,
                 edge deployment, and bundle sizes your users will thank you for.
@@ -100,7 +100,7 @@ const items = [
             </div>
         </div>,
 
-    },
+    }
 ]
 
 const cards = [
