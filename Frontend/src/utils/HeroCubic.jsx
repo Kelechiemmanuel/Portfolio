@@ -96,7 +96,7 @@ const HeroCubic = () => {
 
                     {/* SECOND ORBIT RING */}
                     <div
-                        className="absolute left-1/2 top-1/2 h-108 w-108 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-400/10 dark:border-white/5"
+                        className="absolute left-1/2 top-1/2 h-108 w-108 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-900/10 dark:border-white/5"
                         style={{
                             transform: "rotateY(65deg)",
                             transformStyle: "preserve-3d",
