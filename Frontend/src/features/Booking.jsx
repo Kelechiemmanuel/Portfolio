@@ -277,7 +277,7 @@ const Booking = () => {
                                                 </label>
                                                 {errors.general && <div className='text-xs text-red-600 dark:text-red-400'>{errors.general}</div>}
                                                 <button onClick={submit} disabled={submitting}
-                                                    className='mt-1 py-2.5 rounded-md bg-[#0F172A] text-white dark:bg-white dark:text-[#0F172A] font-bold text-sm disabled:opacity-50'>
+                                                    className='mt-1 py-2.5 rounded-md bg-[#0F172A] text-white dark:bg-white dark:text-[#0F172A] font-bold text-sm disabled:opacity-50 cursor-pointer'>
                                                     {submitting ? 'Booking…' : 'Confirm booking'}
                                                 </button>
                                             </div>
