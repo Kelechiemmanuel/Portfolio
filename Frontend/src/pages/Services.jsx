@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { LuChevronDown } from "react-icons/lu";
 import crystal from '../assets/crystal.png'
+import Screenshot from '../assets/Screenshot.png'
+import Blog from '../assets/Blog.png'
 import { FaArrowRight } from 'react-icons/fa';
 
 const items = [
@@ -83,7 +85,7 @@ const items = [
     {
         id: 5,
         serial: "05",
-        title: "Brand Positioning",
+        titles: "Brand Positioning",
         description: <div>
             <p className='pb-10'>SvelteKit for applications that need to be fast by default. Server-side rendering,
                 edge deployment, and bundle sizes your users will thank you for.
@@ -99,6 +101,36 @@ const items = [
         </div>,
 
     },
+]
+
+const cards = [
+    {
+        id: 1,
+        title: <div className='py-5'>
+            <p>May 2026 <label>.  Engineering</label></p>
+            <h2 className='font-medium text-2xl py-2'>Custom engineering, not cookie-cutter development.</h2>
+            <p>Custom engineering, not cookie-cutter development. Every engagement is built around your goals.</p>
+        </div>,
+        image: crystal
+    },
+    {
+        id: 2,
+        title: <div className='py-5'>
+            <p>May 2025 <label>.  Engineering</label></p>
+            <h2 className='font-medium text-2xl py-2'>Scan a project for hardcoded secrets and insecure configs.</h2>
+            <p>Custom engineering, not cookie-cutter development. Every engagement is built around your goals.</p>
+        </div>,
+        image: Screenshot
+    },
+    {
+        id: 3,
+        title: <div className='py-5'>
+            <p>May 2026 <label>.  Engineering</label></p>
+            <h2 className='font-medium text-2xl py-2'>Custom engineering, not cookie-cutter development.</h2>
+            <p>Custom engineering, not cookie-cutter development. Every engagement is built around your goals.</p>
+        </div>,
+        image: Blog
+    }
 ]
 
 const Services = () => {
@@ -155,36 +187,19 @@ const Services = () => {
                         </div>
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10'>
-                        <div className=''>
-                            <div className='dark:border-gray-300 border-gray-600 border rounded-2xl w-full'>
-                                <img src={crystal} alt="" className='rounded-2xl w-full' />
-                            </div>
-                            <div className='py-5'>
-                                <p>May 2026 <label>.  Engineering</label></p>
-                                <h2 className='font-medium text-2xl py-2'>Custom engineering, not cookie-cutter development.</h2>
-                                <p>Custom engineering, not cookie-cutter development. Every engagement is built around your goals.</p>
-                            </div>
-                        </div>
-                        <div className=''>
-                            <div className='dark:border-gray-300 border-gray-600 border rounded-2xl'>
-                                <img src={crystal} alt="" className='rounded-2xl w-full' />
-                            </div>
-                            <div className='py-5'>
-                                <p>May 2026 <label>.  Engineering</label></p>
-                                <h2 className='font-medium text-2xl py-2'>Custom engineering, not cookie-cutter development.</h2>
-                                <p>Custom engineering, not cookie-cutter development. Every engagement is built around your goals.</p>
-                            </div>
-                        </div>
-                        <div className=''>
-                            <div className='dark:border-gray-300 border-gray-600 border rounded-2xl'>
-                                <img src={crystal} alt="" className='rounded-2xl w-full' />
-                            </div>
-                            <div className='py-5'>
-                                <p>May 2026 <label>.  Engineering</label></p>
-                                <h2 className='font-medium text-2xl py-2'>Custom engineering, not cookie-cutter development.</h2>
-                                <p>Custom engineering, not cookie-cutter development. Every engagement is built around your goals.</p>
-                            </div>
-                        </div>
+
+                        {
+                            cards.map((card, id) => (
+                                <div key={id} className='dark:border-gray-300 border-gray-600 border-b border rounded-t-2xl'>
+                                    <div className='w-full h-60 overflow-hidden group rounded-t-2xl'>
+                                        <img src={card.image} alt="" className='w-full h-full rounded-t-2xl object-cover transition-transform duration-500 group-hover:scale-110' />
+                                    </div>
+                                    <div className='p-5'>
+                                        {card.title}
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>
