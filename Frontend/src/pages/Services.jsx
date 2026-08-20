@@ -190,7 +190,7 @@ const Services = () => {
 
                         {
                             cards.map((card, id) => (
-                                <div key={id} className='dark:border-gray-300 border-gray-600 border-b border rounded-t-2xl'>
+                                <div key={id} className='dark:border-gray-300 border-gray-600 border-b border rounded-2xl'>
                                     <div className='w-full h-60 overflow-hidden group rounded-t-2xl'>
                                         <img src={card.image} alt="" className='w-full h-full rounded-t-2xl object-cover transition-transform duration-500 group-hover:scale-110' />
                                     </div>
