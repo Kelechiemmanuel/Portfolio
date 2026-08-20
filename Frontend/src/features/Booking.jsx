@@ -144,7 +144,7 @@ const Booking = () => {
 
     return (
         <div className='transition-colors duration-300'>
-            <button onClick={() => setPop(true)} className='cursor-pointer border border-gray-800 py-2 px-5 rounded-sm dark:bg-white dark:text-[#0F172A] font-bold'>Book A Session</button>
+            <button onClick={() => setPop(true)} className='cursor-pointer border border-gray-800 py-2 px-5 rounded-sm dark:bg-white dark:text-[#0F172A] font-bold text-sm'>Book A Session</button>
 
             <div className={`fixed inset-0 z-9999 transition-all duration-500 ease-in-out bg-black/90 left-0 h-screen
                 ${pop ? "translate-x-0 opacity-100" : "translate-x-full opacity-0 pointer-events-none"}`}>
