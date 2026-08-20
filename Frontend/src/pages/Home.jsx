@@ -12,6 +12,7 @@ import { FaArrowDown } from "react-icons/fa";
 import About from './About';
 import Services from './Services';
 import Testimonies from './Testimonies';
+import HeroCubic from '../utils/HeroCubic';
 
 const status = [
     {
@@ -77,23 +78,27 @@ const Home = () => {
     const activeCard = Math.floor(step / 3);
     return (
         <div className='h-full mb-50 flex flex-col'>
-            <div className='px-10 py-35 lg:py-55 lg:px-40'>
-                <p>SOFTWARE CRAFTING...</p>
-                <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>
-                    Crafting scalable digital products <br className='hidden md:block' />
-                    with engineering excellence.
-                </h1>
-                <p className='leading-7 mb-10'>
-                    From strategy to deployment, we transform ambitious ideas into polished digital
-                    experiences <br className='hidden md:block' /> built for performance, scalability, and growth. Obsess over the details that most people never notice— <br className='hidden md:block' />
-                    because those details create products that users never forget.
-                </p>
-                <div className='flex items-start lg:flex-row gap-4 group'>
-                    <Booking />
-                    <div className='flex items-center gap-5'>
-                        <button className=''>Let it work for you </button>
-                        <FaArrowRight className='transition-transform duration-300 group-hover:translate-x-2' />
+            <div className='flex justify-between items-center gap-10 w-full px-10 py-35 lg:py-40 lg:px-40 '>
+                <div className='w-full'>
+                    <p>SOFTWARE CRAFTING...</p>
+                    <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>
+                        Crafting scalable digital products with engineering excellence.
+                    </h1>
+                    <p className='leading-7 mb-10'>
+                        From strategy to deployment, we transform ambitious ideas into polished digital
+                        experiences built for performance, scalability, and growth. Obsess over the details that most people never notice,
+                        because those details create products that users never forget.
+                    </p>
+                    <div className='flex items-start lg:flex-row gap-4 group'>
+                        <Booking />
+                        <div className='flex items-center gap-5'>
+                            <button className=''>Let it work for you </button>
+                            <FaArrowRight className='transition-transform duration-300 group-hover:translate-x-2' />
+                        </div>
                     </div>
+                </div>
+                <div>
+                    <HeroCubic />
                 </div>
             </div>
             <div className='dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A]'>

@@ -6,9 +6,11 @@ import { FiMenu, FiX } from "react-icons/fi"
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false)
+
     return (
-        <header className='w-full fixed left-0 right-0 z-2000 border-b lg:px-40 px-10 bg-white dark:bg-[#0F172A] border-b-gray-400 dark:border-b-gray-800'>
-            <nav className='flex justify-between py-5 '>
+        <header className='w-full fixed left-0 right-0 z-2000 lg:px-40 px-10 bg-white/80 dark:bg-[#0F172A]/80 backdrop-blur-md border-b border-slate-200/70 dark:border-white/10'>
+            <nav className='flex justify-between py-5'>
+
                 <h1 className='font-bold'>AKE</h1>
 
                 <div className='lg:flex hidden gap-6 font-light dark:text-gray-400'>
@@ -19,7 +21,7 @@ const Navbar = () => {
                     <Link to='/blog'>Blog</Link>
                 </div>
 
-                <div className='lg:flex hidden gap-10 '>
+                <div className='lg:flex hidden gap-10'>
                     <ThemeToggle />
                     <Booking />
                 </div>
@@ -28,12 +30,18 @@ const Navbar = () => {
                     <button onClick={() => setMenu(!menu)}>
                         {menu ? <FiX size={24} /> : <FiMenu size={24} />}
                     </button>
+
                     {menu && (
                         <div className='fixed left-0 top-0 w-full'>
                             <div className='h-screen w-full relative bg-white dark:bg-[#0F172A]'>
-                                <button onClick={() => setMenu(false)} className='absolute right-10 top-5'>
+
+                                <button
+                                    onClick={() => setMenu(false)}
+                                    className='absolute right-10 top-5'
+                                >
                                     <FiX size={24} />
                                 </button>
+
                                 <div className='flex flex-col gap-6 font-light p-10'>
                                     <Link to='/' onClick={() => setMenu(false)}>Home</Link>
                                     <Link to='/about' onClick={() => setMenu(false)}>About</Link>
@@ -41,17 +49,17 @@ const Navbar = () => {
                                     <Link to='/testimonies' onClick={() => setMenu(false)}>Testimonies</Link>
                                     <Link to='/blog' onClick={() => setMenu(false)}>Blog</Link>
                                 </div>
+
                                 <div className='flex gap-10 p-10'>
                                     <Booking />
-                                    {/* <ThemeToggle /> */}
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
                     )}
                 </div>
-            </nav>
 
+            </nav>
         </header>
     )
 }
