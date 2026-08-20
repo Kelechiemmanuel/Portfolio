@@ -52,7 +52,7 @@ const Navbar = () => {
 
                                 <div className='flex gap-10 p-10'>
                                     <Booking />
-                                    <ThemeToggle />
+                                    {/* <ThemeToggle /> */}
                                 </div>
                             </div>
                         </div>

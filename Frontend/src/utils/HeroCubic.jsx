@@ -180,12 +180,12 @@ const HeroCubic = () => {
 
                         {/* Center content */}
                         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
-                            <span className="text-2xl font-bold tracking-tight text-white drop-shadow-lg">
-                                DEV
+                            <span className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white drop-shadow-lg">
+                                AKEStack
                             </span>
 
-                            <span className="mt-1 font-mono text-[8px] uppercase tracking-[0.35em] text-white/60">
-                                Full Stack
+                            <span className="mt-1 font-mono text-[8px] uppercase text-slate-900 dark:text-white">
+                                your world...
                             </span>
                         </div>
 

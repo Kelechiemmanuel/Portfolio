@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react'
+import ThemeToggle from '../utils/ThemeToggle'
 
 const API_BASE = 'https://portfolio-ukyo.onrender.com/api' // swap for your deployed URL later
 
@@ -159,7 +160,10 @@ const Booking = () => {
                                 <div className='p-6 sm:p-8'>
                                     <div className='mb-6'>
                                         <div className='text-xs font-bold tracking-widest uppercase text-gray-500 dark:text-gray-400 mb-1'>&gt;_ Book a session</div>
-                                        <h2 className='text-xl font-bold'>Book time with us</h2>
+                                        <div className='flex justify-start items-center gap-10'>
+                                            <h2 className='text-xl font-bold'>Book time with us</h2>
+                                            <ThemeToggle />
+                                        </div>
                                         <p className='text-sm text-gray-500 dark:text-gray-400 mt-1'>Pick a date, a slot, and a length — we'll confirm by email.</p>
                                     </div>
 
