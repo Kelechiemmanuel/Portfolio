@@ -150,7 +150,7 @@ const Booking = () => {
                 ${pop ? "translate-x-0 opacity-100" : "translate-x-full opacity-0 pointer-events-none"}`}>
                 {pop && (
                     <div className='fixed inset-0 z-9999'>
-                        <div className='absolute inset-0 bg-black/80' onClick={closeModal} />
+                        <div className='absolute inset-0 bg-black/90' onClick={closeModal} />
 
                         <div className='absolute inset-y-0 right-0 w-full sm:max-w-xl'>
                             <div className='h-screen w-full bg-white dark:bg-[#0F172A] rounded-l-2xl relative overflow-y-auto text-[#0F172A] dark:text-white'>
