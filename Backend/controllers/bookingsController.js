@@ -1,6 +1,7 @@
-const pool = require('../config/db');
+const pool = require('../config/db')
+const { sendBookingNotification } = require('../utils/mailer')
 
-async function createBooking(req, res) {
+const createBooking = async (req, res) => {
     const { date, time, name, email, note, duration } = req.body;
 
     if (!date || !time || !name || !email || !duration) {
@@ -43,8 +44,11 @@ async function createBooking(req, res) {
             RETURNING *`,
             [slotId, name, email, note || null, duration]
         );
-
         await client.query('COMMIT');
+
+        sendBookingNotification({ ...bookingResult.rows[0], date, time })
+            .catch(err => console.error('Failed to send notification email:', err));
+
         res.status(201).json(bookingResult.rows[0]);
     } catch (err) {
         await client.query('ROLLBACK');
