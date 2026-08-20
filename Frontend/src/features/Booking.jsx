@@ -155,7 +155,7 @@ const Booking = () => {
 
                         <div className='absolute inset-y-0 right-0 w-full sm:max-w-xl'>
                             <div className='h-screen w-full bg-white dark:bg-[#0F172A] rounded-l-2xl relative overflow-y-auto text-[#0F172A] dark:text-white'>
-                                <button className='absolute right-5 top-5 z-10 w-8 h-8 flex items-center cursor-pointer justify-center rounded-full border border-gray-300 dark:border-gray-700 cursor-pointer' onClick={closeModal}>×</button>
+                                <button className='absolute right-5 top-5 z-10 w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 dark:border-gray-700 cursor-pointer' onClick={closeModal}>×</button>
 
                                 <div className='p-6 sm:p-8'>
                                     <div className='mb-6'>
