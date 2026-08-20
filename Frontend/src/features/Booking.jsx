@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react'
 
-const API_BASE = 'http://localhost:3005/api' // swap for your deployed URL later
+const API_BASE = 'https://portfolio-ukyo.onrender.com/api' // swap for your deployed URL later
 
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 const DAY_LABELS = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]
