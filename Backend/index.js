@@ -6,7 +6,13 @@ const cors = require('cors')
 const pool = require('./config/db')
 const { startReminderJob } = require('./utils/reminder')
 
-app.use(cors())
+app.use(cors({
+    origin: [
+        "http://localhost:5173",
+        "https://your-frontend.vercel.app"
+    ],
+    credentials: true
+}));
 app.use(express.json())
 
 app.use('/api/availability', require('./routes/availabilityRoute'))
