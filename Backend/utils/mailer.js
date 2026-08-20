@@ -1,11 +1,14 @@
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
     },
+    family: 4, // force IPv4 — fixes ENETUNREACH on hosts with broken IPv6 routing
 });
 
 async function sendBookingNotification(booking) {
@@ -17,12 +20,12 @@ async function sendBookingNotification(booking) {
         replyTo: email, // lets you hit "reply" and it goes straight to the booker
         subject: `New booking: ${name} — ${date} ${time}`,
         text: `
-Name: ${name}
-Email: ${email}
-Date: ${date}
-Time: ${time}
-Duration: ${duration_minutes} min
-Note: ${note || '(none)'}
+    Name: ${name}
+    Email: ${email}
+    Date: ${date}
+    Time: ${time}
+    Duration: ${duration_minutes} min
+    Note: ${note || '(none)'}
     `.trim(),
     });
 }
