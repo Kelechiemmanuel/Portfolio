@@ -2,6 +2,7 @@ const pool = require('../config/db')
 const { sendBookingNotification } = require('../utils/mailer')
 
 const createBooking = async (req, res) => {
+    console.log('Incoming booking body:', req.body);
     const { date, time, name, email, note, duration } = req.body;
 
     if (!date || !time || !name || !email || !duration) {
