@@ -9,7 +9,7 @@ app.use(cors({
     origin: [
         "http://localhost:5173",
         "http://localhost:5174",
-        "https://your-frontend.vercel.app"
+        "https://portfolio-nine-theta-10.vercel.app"
     ],
     credentials: true
 }));
