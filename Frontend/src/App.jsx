@@ -9,7 +9,7 @@ import Login from './features/Login'
 import Services from './pages/Services'
 import Testimonies from './pages/Testimonies'
 import Blog from './pages/Blog'
-import AdminPanel from './features/adminPanel'
+import AdminPanel from './features/AdminPanel'
 
 const App = () => {
   return (
