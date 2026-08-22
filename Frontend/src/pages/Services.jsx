@@ -198,7 +198,7 @@ const Services = () => {
                     </div>
                 </div>
             </div>
-            <hr className='dark:border-gray-300 border-gray-600' />
+            {/* <hr className='dark:border-gray-300 border-gray-600' /> */}
         </div>
     )
 }
