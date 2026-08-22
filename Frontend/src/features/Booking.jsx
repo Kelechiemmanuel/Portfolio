@@ -160,7 +160,7 @@ const Booking = () => {
                                 <div className='p-6 sm:p-8'>
                                     <div className='mb-6'>
                                         <div className='text-xs font-bold tracking-widest uppercase text-gray-500 dark:text-gray-400 mb-1'>&gt;_ Book a session with
-                                            <span className='bg-[#0F172A] text-white dark:bg-white dark:text-[#0F172A] ml-2 rounded-sm p-1'> AkeStack</span>
+                                            <span className='bg-[#0F172A] text-white dark:bg-white dark:text-[#0F172A] ml-2 rounded-sm p-1'> A k e S t a c k</span>
                                         </div>
                                         <div className='flex justify-start items-center gap-10'>
                                             <h2 className='text-xl font-bold'>Book time with us</h2>

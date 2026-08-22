@@ -10,8 +10,15 @@ const Navbar = () => {
     return (
         <header className='w-full fixed left-0 right-0 z-2000 lg:px-40 px-10 bg-white/80 dark:bg-[#0F172A]/80 backdrop-blur-md border-b border-slate-200/70 dark:border-white/10'>
             <nav className='flex justify-between py-5'>
-
-                <h1 className='font-bold'>AKE</h1>
+                <div>
+                    <h1 className='font-bold'>A K E S T A C K</h1>
+                    <div>
+                        <p className='h-3 w-3 rounded-full border'></p>
+                        <p className='h-3 w-10 border rounded-2xl flex justify-between items-center p-1'>
+                            <p>&lt; /&gt;</p>
+                        </p>
+                    </div>
+                </div>
 
                 <div className='lg:flex hidden gap-6 font-light dark:text-gray-400'>
                     <Link to='/'>Home</Link>

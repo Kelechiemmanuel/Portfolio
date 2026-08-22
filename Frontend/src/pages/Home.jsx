@@ -77,7 +77,7 @@ const Home = () => {
     }, []);
     const activeCard = Math.floor(step / 3);
     return (
-        <div className='h-full mb-50 flex flex-col'>
+        <div className='h-full flex flex-col'>
             <div className='flex lg:flex-row flex-col justify-between items-center gap-10 w-full px-10 py-35 lg:py-40 lg:px-40 mt-10'>
                 <div className='w-full'>
                     <p>SOFTWARE CRAFTING...</p>
