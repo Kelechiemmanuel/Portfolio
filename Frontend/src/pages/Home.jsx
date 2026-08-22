@@ -13,6 +13,7 @@ import About from './About';
 import Services from './Services';
 import Testimonies from './Testimonies';
 import HeroCubic from '../utils/HeroCubic';
+import Blog from './Blog';
 
 const status = [
     {
@@ -244,6 +245,7 @@ const Home = () => {
             </div>
             <About />
             <Services />
+            <Blog />
             <Testimonies />
         </div>
     )

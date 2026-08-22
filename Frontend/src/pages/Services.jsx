@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { LuChevronDown } from "react-icons/lu";
-import crystal from '../assets/crystal.png'
 import Screenshot from '../assets/Screenshot.png'
+import shipment from '../assets/shipment.png'
 import Blog from '../assets/Blog.png'
 import { FaArrowRight } from 'react-icons/fa';
 
@@ -101,7 +101,8 @@ const cards = [
             <h2 className='font-medium text-2xl py-2'>Custom engineering, not cookie-cutter development.</h2>
             <p>Custom engineering, not cookie-cutter development. Every engagement is built around your goals.</p>
         </div>,
-        image: crystal
+        url: 'https://logistics-omega-eight.vercel.app/',
+        image: shipment
     },
     {
         id: 2,
@@ -110,6 +111,7 @@ const cards = [
             <h2 className='font-medium text-2xl py-2'>Scan a project for hardcoded secrets and insecure configs.</h2>
             <p>Custom engineering, not cookie-cutter development. Every engagement is built around your goals.</p>
         </div>,
+        url: 'https://file-scanner-dun.vercel.app/',
         image: Screenshot
     },
     {
@@ -119,6 +121,7 @@ const cards = [
             <h2 className='font-medium text-2xl py-2'>Custom engineering, not cookie-cutter development.</h2>
             <p>Custom engineering, not cookie-cutter development. Every engagement is built around your goals.</p>
         </div>,
+        url: 'https://authorization-iota-seven.vercel.app/',
         image: Blog
     }
 ]
@@ -131,7 +134,7 @@ const Services = () => {
     }
     return (
         <div className='h-full w-full dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A]'>
-            <div className='px-10 py-35 lg:py-30 lg:px-40'>
+            <div className='px-10 pb-10 lg:pt-30 lg:px-40'>
                 <p>SERVICES...</p>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-30'>
                     <div>
@@ -182,7 +185,9 @@ const Services = () => {
                             cards.map((card, id) => (
                                 <div key={id} className='dark:border-gray-300 border-gray-600 border-b border rounded-2xl'>
                                     <div className='w-full h-60 overflow-hidden group rounded-t-2xl'>
-                                        <img src={card.image} alt="" className='w-full h-full rounded-t-2xl object-cover transition-transform duration-500 group-hover:scale-110' />
+                                        <a href={card.url} target="_blank" rel="noopener noreferrer">
+                                            <img src={card.image} alt="" className='w-full h-full rounded-t-2xl object-cover transition-transform duration-500 group-hover:scale-110' />
+                                        </a>
                                     </div>
                                     <div className='p-5'>
                                         {card.title}
