@@ -19,6 +19,7 @@ const Navbar = () => {
                     <Link to='/services'>Services</Link>
                     <Link to='/testimonies'>Testimonies</Link>
                     <Link to='/blog'>Blog</Link>
+                    <Link to='admin'>Admin</Link>
                 </div>
 
                 <div className='lg:flex hidden gap-10'>
@@ -48,6 +49,7 @@ const Navbar = () => {
                                     <Link to='/services' onClick={() => setMenu(false)}>Services</Link>
                                     <Link to='/testimonies' onClick={() => setMenu(false)}>Testimonies</Link>
                                     <Link to='/blog' onClick={() => setMenu(false)}>Blog</Link>
+                                    <Link to='admin'>Admin</Link>
                                 </div>
 
                                 <div className='flex gap-10 p-10'>

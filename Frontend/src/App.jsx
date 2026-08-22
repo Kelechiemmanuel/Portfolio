@@ -9,6 +9,7 @@ import Login from './features/Login'
 import Services from './pages/Services'
 import Testimonies from './pages/Testimonies'
 import Blog from './pages/Blog'
+import AdminPanel from './features/adminPanel'
 
 const App = () => {
   return (
@@ -22,10 +23,11 @@ const App = () => {
           <Route path='/testimonies' element={<Testimonies />} />
         </Route>
 
-        {/* <Route element={<AuthLayout />}>
-        <Route path='/account' element={<Account />} />
-        <Route path='/login' element={<Login />} />
-      </Route> */}
+        <Route element={<AuthLayout />}>
+          <Route path='/account' element={<Account />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/admin' element={<AdminPanel />} />
+        </Route>
       </Routes>
     </div>
   )
