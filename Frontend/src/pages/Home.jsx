@@ -116,13 +116,25 @@ const Home = () => {
                         </p>
                     </div>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-20'>
-                        <div className=' flex flex-col gap-10'>
+                        <div className=' flex flex-col gap-8'>
                             <div className='flex items-start justify-center gap-5'>
                                 <button className='border p-2 rounded-sm'>
                                     <HiCheck />
                                 </button>
                                 <div>
-                                    <h1>Cross-Platform Mobile Solutions</h1>
+                                    <h1 className='font-medium pb-3'>Architecture built to grow with your business.</h1>
+                                    <p>
+                                        We design highly available backend infrastructure that scales reliably with growing traffic.
+                                    </p>
+                                </div>
+                            </div>
+                            <hr className='dark:border-gray-200 border-gray-600' />
+                            <div className='flex items-start justify-center gap-5'>
+                                <button className='border p-2 rounded-sm'>
+                                    <HiCheck />
+                                </button>
+                                <div>
+                                    <h1 className='font-medium pb-3'>Native-quality experiences.</h1>
                                     <p>
                                         We build high-performance mobile applications that run seamlessly on both iOS and Android from a single codebase.
                                     </p>
@@ -134,9 +146,10 @@ const Home = () => {
                                     <HiCheck />
                                 </button>
                                 <div>
-                                    <h1>Cross-Platform Mobile Solutions</h1>
+                                    <h1 className='font-medium pb-3'>Seamless Infrastructure Transition</h1>
                                     <p>
-                                        We build high-performance mobile applications that run seamlessly on both iOS and Android from a single codebase.
+                                        We take large, older applications, put them into containers, gradually break them into
+                                        manageable components, and move them to the cloud while keeping the application running for users.
                                     </p>
                                 </div>
                             </div>
@@ -148,19 +161,8 @@ const Home = () => {
                                 <div>
                                     <h1>Cross-Platform Mobile Solutions</h1>
                                     <p>
-                                        We build high-performance mobile applications that run seamlessly on both iOS and Android from a single codebase.
-                                    </p>
-                                </div>
-                            </div>
-                            <hr className='dark:border-gray-200 border-gray-600' />
-                            <div className='flex items-start justify-center gap-5'>
-                                <button className='border p-2 rounded-sm'>
-                                    <HiCheck />
-                                </button>
-                                <div>
-                                    <h1>Cross-Platform Mobile Solutions</h1>
-                                    <p>
-                                        We build high-performance mobile applications that run seamlessly on both iOS and Android from a single codebase.
+                                        We build high-performance mobile experiences with React Native, delivering seamless iOS
+                                        and Android applications from a single, maintainable codebase.
                                     </p>
                                 </div>
                             </div>
