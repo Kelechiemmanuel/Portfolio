@@ -11,7 +11,9 @@ const Navbar = () => {
         <header className='w-full fixed left-0 right-0 z-2000 lg:px-40 px-10 bg-white/80 dark:bg-[#0F172A]/80 backdrop-blur-md border-b border-slate-200/70 dark:border-white/10'>
             <nav className='flex justify-between py-5'>
                 <div>
-                    <h1 className='font-bold'>A K E S T A C K</h1>
+                    <Link to='/' className='font-bold text-sm tracking-widest'>
+                        A K E S T A C K
+                    </Link>
                     <div>
                         <p className='h-3 w-3 rounded-full border'></p>
                         <p className='h-3 w-10 border rounded-2xl flex justify-between items-center p-1'>
