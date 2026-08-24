@@ -53,7 +53,7 @@ const OpeningAnimation = ({ onComplete }) => {
                             delay: 0.3
                         }}
                     >
-                        Software Engineering
+                        Software Engineer
                     </motion.p>
 
                     <motion.h1
