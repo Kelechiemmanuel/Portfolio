@@ -4,12 +4,18 @@ const OpeningAnimation = ({ onComplete }) => {
     return (
         <motion.div
             className="fixed inset-0 z-9999 overflow-hidden bg-[#0F172A] text-white"
-            initial={{ y: 0 }}
-            animate={{ y: "-100%" }}
+            initial={{
+                opacity: 1,
+                filter: "blur(0px)"
+            }}
+            animate={{
+                opacity: 0,
+                filter: "blur(8px)"
+            }}
             transition={{
-                duration: 2.7,
+                duration: 3,
                 delay: 2.8,
-                ease: [0.76, 0, 0.24, 1]
+                ease: "easeInOut"
             }}
             onAnimationComplete={onComplete}
         >
