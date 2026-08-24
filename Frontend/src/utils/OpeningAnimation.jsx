@@ -13,8 +13,8 @@ const OpeningAnimation = ({ onComplete }) => {
                 filter: "blur(8px)"
             }}
             transition={{
-                duration: 3,
-                delay: 2.8,
+                duration: 1.2,
+                delay: 4.5,
                 ease: "easeInOut"
             }}
             onAnimationComplete={onComplete}
@@ -59,7 +59,7 @@ const OpeningAnimation = ({ onComplete }) => {
                             delay: 0.3
                         }}
                     >
-                        Software Engineer
+                        Software Engineer.
                     </motion.p>
 
                     <motion.h1
@@ -70,14 +70,14 @@ const OpeningAnimation = ({ onComplete }) => {
                             filter: "blur(12px)"
                         }}
                         animate={{
-                            opacity: 1,
-                            scale: 1,
-                            filter: "blur(0px)"
+                            opacity: [0, 1, 1, 0],
+                            scale: [0.8, 1, 1, 0.95],
+                            filter: ["blur(12px)", "blur(0px)", "blur(0px)", "blur(8px)"]
                         }}
                         transition={{
-                            duration: 1.5,
-                            delay: 0.6,
-                            ease: [0.22, 1, 0.36, 1]
+                            duration: 4.5,
+                            times: [0, 0.2, 0.65, 1],
+                            ease: "easeInOut"
                         }}
                     >
                         A K E S T A C K
