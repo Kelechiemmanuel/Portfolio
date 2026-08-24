@@ -53,7 +53,7 @@ const OpeningAnimation = ({ onComplete }) => {
                             delay: 0.3
                         }}
                     >
-                        Your number one appointment booking platform
+                        Software Engineering
                     </motion.p>
 
                     <motion.h1
