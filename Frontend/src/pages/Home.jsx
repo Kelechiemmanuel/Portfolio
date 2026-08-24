@@ -69,7 +69,9 @@ const cards = [
 const Home = () => {
     const [pop, setPop] = useState(false)
     const [step, setStep] = useState(0);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(
+        !sessionStorage.getItem("openingAnimationShown")
+    );
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -82,7 +84,15 @@ const Home = () => {
     return (
         <>
             {loading && (
-                <OpeningAnimation onComplete={() => setLoading(false)} />
+                <OpeningAnimation
+                    onComplete={() => {
+                        sessionStorage.setItem(
+                            "openingAnimationShown",
+                            "true"
+                        );
+                        setLoading(false);
+                    }}
+                />
             )}
             <div className='h-full flex flex-col'>
                 <div className='flex lg:flex-row flex-col justify-between items-center gap-10 w-full px-10 py-35 lg:py-40 lg:px-40 mt-10'>
