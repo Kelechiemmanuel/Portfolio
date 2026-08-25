@@ -261,10 +261,10 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <About />
-                <Services />
-                <Blog />
-                <Testimonies />
+                {/* <About /> */}
+                {/* <Services /> */}
+                {/* <Blog /> */}
+                {/* <Testimonies /> */}
             </div>
         </>
     )
