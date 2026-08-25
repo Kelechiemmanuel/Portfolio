@@ -19,7 +19,7 @@ const Footer = () => {
                         A software development company that creates high-quality, reliable applications for startups that have received investment funding.
                     </p>
                 </div>
-                <div className='flex justify-between'>
+                <div className='grid grid-cols-2 md:grid-cols-3'>
                     <div className=''>
                         <h1 className='font-bold mb-5'>P R O D U CT</h1>
                         <div className='flex flex-col gap-3 text-[12px]'>
