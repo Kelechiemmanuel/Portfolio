@@ -4,8 +4,8 @@ import Screenshot from '../assets/Screenshot.png'
 const Blog = () => {
     return (
         <div className='w-full h-full'>
-            <div className='flex flex-col md:flex-row gap-5 justify-center pt-30 bg-[#f6f3ef] px-10 pb-3 lg:pt-30 lg:px-40'>
-                <div className="group shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-[#0F172A] text-white w-full p-10 rounded-2xl overflow-hidden">
+            <div className='flex flex-col md:flex-row gap-5 justify-center w-full pt-30 bg-[#f6f3ef] px-6 md:px-10 pb-3 lg:pt-30 lg:px-40'>
+                <div className="group shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-[#0F172A] text-white w-full md:w-[70%] p-6 md:p-10 rounded-2xl overflow-hidden">
                     <div>
                         <h1 className="font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5 transition-transform duration-500 group-hover:scale-105">
                             Scan for Vuln
@@ -26,8 +26,6 @@ const Blog = () => {
                                 className="w-full h-auto max-w-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-110 border border-gray-300"
                             />
                         </div>
-
-
                     </div>
 
                     <div className="pt-20">
@@ -35,21 +33,21 @@ const Blog = () => {
                             Year: 2026
                         </p>
                     </div>
-
                 </div>
-                <div className='shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-white rounded-xl'>
-                    <div className='h-50 w-100'>
 
+                <div className='shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-white rounded-xl w-full md:w-[30%]'>
+                    <div className='h-40 w-full md:h-full'>
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col md:flex-row gap-5 justify-center w-full px-10 lg:px-40 bg-[#f6f3ef] py-5'>
-                <div className='shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-white rounded-xl'>
-                    <div className='h-50 w-100'>
 
+            <div className='flex flex-col md:flex-row gap-5 justify-center w-full px-6 md:px-10 lg:px-40 bg-[#f6f3ef] py-5'>
+                <div className='shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-white rounded-xl w-full md:w-[30%]'>
+                    <div className='h-40 w-full md:h-full'>
                     </div>
                 </div>
-                <div className="group shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-[#0F172A] text-white w-full p-10 rounded-2xl overflow-hidden">
+
+                <div className="group shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-[#0F172A] text-white w-full md:w-[70%] p-6 md:p-10 rounded-2xl overflow-hidden">
                     <div>
                         <h1 className="font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5 transition-transform duration-500 group-hover:scale-105">
                             Scan for Vuln
@@ -70,8 +68,6 @@ const Blog = () => {
                                 className="w-full h-auto max-w-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-110 border border-gray-300"
                             />
                         </div>
-
-
                     </div>
 
                     <div className="pt-20">
@@ -79,7 +75,6 @@ const Blog = () => {
                             Year: 2026
                         </p>
                     </div>
-
                 </div>
             </div>
         </div>
