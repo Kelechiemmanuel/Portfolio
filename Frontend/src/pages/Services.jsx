@@ -134,7 +134,7 @@ const Services = () => {
     }
     return (
         <div className='h-full w-full dark:bg-white bg-[#0F172A] text-white dark:text-[#0F172A]'>
-            <div className='px-10 pb-10 lg:pt-30 lg:px-40'>
+            <div className='px-10 pb-10 pt-10 lg:pt-30 lg:px-40'>
                 <p>SERVICES...</p>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-30'>
                     <div>

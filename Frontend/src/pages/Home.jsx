@@ -183,7 +183,7 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='gap-3 flex-col lg:flex hidden'>
+                            <div className='gap-3 flex flex-col'>
                                 {cards.map((card, i) => {
                                     const progress = step - i * 3;
 
@@ -196,7 +196,7 @@ const Home = () => {
 
                                     return (
                                         <div key={i} className='flex flex-col items-center justify-center'>
-                                            <div className={`${status[state].borderColor} rounded-sm border p-3 min-w-80 transition-all duration-500`}>
+                                            <div className={`${status[state].borderColor} rounded-sm border p-3 w-full max-w-80 transition-all duration-500`}>
                                                 <div className="flex items-center gap-5">
                                                     <button className="bg-white dark:bg-[#0F172A] p-2 rounded-sm">
                                                         {state === 0 && (
@@ -232,7 +232,6 @@ const Home = () => {
                                 <div className="flex items-center justify-center gap-3">
                                     {activeCard < cards.length ? (
                                         <>
-                                            {/* <ImSpinner2 className="animate-spin text-yellow-400" /> */}
                                             <span className="dark:text-black text-yellow-500">
                                                 {cards[activeCard].loading}
                                             </span>
@@ -250,7 +249,7 @@ const Home = () => {
                                     <p>
                                         Refine. Rebuild. Repeat.
                                     </p>
-                                    <div className='flex gap-3 mt-3'>
+                                    <div className='flex flex-wrap justify-center gap-3 mt-3'>
                                         <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>CI/CD</button>
                                         <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Staging</button>
                                         <button className='border dark:border-[#0F172A] py-2 px-3 rounded-2xl text-xs'>Rollback</button>

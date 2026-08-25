@@ -41,7 +41,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col md:flex-row gap-5 justify-center w-full px-6 md:px-10 lg:px-40 bg-[#f6f3ef] py-5'>
+            <div className='flex flex-col-reverse md:flex-row gap-5 justify-center w-full px-6 md:px-10 lg:px-40 bg-[#f6f3ef] py-5'>
                 <div className='shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-white rounded-xl w-full md:w-[30%]'>
                     <div className='h-40 w-full md:h-full'>
                     </div>
