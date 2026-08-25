@@ -264,7 +264,7 @@ const Home = () => {
                 <About />
                 <Services />
                 {/* <Blog /> */}
-                {/* <Testimonies /> */}
+                <Testimonies />
             </div>
         </>
     )
