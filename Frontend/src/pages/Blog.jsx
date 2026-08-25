@@ -5,7 +5,7 @@ const Blog = () => {
     return (
         <div className='w-full h-full'>
             <div className='px-10 pb-3 lg:pt-30 lg:px-40'>
-                <div className='flex flex-col md:flex-row gap-5 justify-center w-full pt-30 bg-[#f6f3ef]'>
+                <div className='flex flex-col md:flex-row gap-5 justify-center bg-[#f6f3ef]'>
                     <div className="group shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-[#0F172A] text-white w-full md:w-[70%] p-10 rounded-2xl overflow-hidden">
                         <div>
                             <h1 className="font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5 transition-transform duration-500 group-hover:scale-105">
@@ -44,7 +44,7 @@ const Blog = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col md:flex-row gap-5 justify-center w-full bg-[#f6f3ef] py-5'>
+                <div className='flex flex-col md:flex-row gap-5 justify-center bg-[#f6f3ef] py-5'>
                     <div className='shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-white rounded-xl'>
                         <div className='h-50 w-100'>
 
