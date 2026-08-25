@@ -95,8 +95,8 @@ const Home = () => {
                 />
             )}
             <div className='h-full flex flex-col'>
-                <div className='flex lg:flex-row flex-col justify-between items-center gap-10 w-full px-10 py-35 lg:py-40 lg:px-40 mt-10'>
-                    <div className='w-full'>
+                <div className='flex lg:flex-row flex-col-reverse justify-between items-center gap-10 w-full px-6 py-16 lg:py-40 lg:px-40 mt-10'>
+                    <div className='w-full text-center lg:text-left'>
                         <p>SOFTWARE CRAFTING...</p>
                         <h1 className='font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5'>
                             Crafting scalable digital products with engineering excellence.
@@ -106,15 +106,15 @@ const Home = () => {
                             experiences built for performance, scalability, and growth. Obsess over the details that most people never notice,
                             because those details create products that users never forget.
                         </p>
-                        <div className='flex items-start lg:flex-row gap-4 group'>
+                        <div className='flex items-start lg:flex-row gap-4 group justify-center lg:justify-start'>
                             <Booking />
                             <div className='flex items-center gap-5'>
-                                <button className=''>Let it work for you </button>
+                                <button>Let it work for you</button>
                                 <FaArrowRight className='transition-transform duration-300 group-hover:translate-x-2' />
                             </div>
                         </div>
                     </div>
-                    <div className='hidden md:block'>
+                    <div className='block'>
                         <HeroCubic />
                     </div>
                 </div>

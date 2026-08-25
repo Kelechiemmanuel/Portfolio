@@ -37,9 +37,12 @@ const Navbar = () => {
                 </div>
 
                 <div className='lg:hidden block'>
-                    <button onClick={() => setMenu(!menu)}>
-                        {menu ? <FiX size={24} /> : <FiMenu size={24} />}
-                    </button>
+                    <div className='flex justify-center items-center gap-2'>
+                        <ThemeToggle />
+                        <button onClick={() => setMenu(!menu)}>
+                            {menu ? <FiX size={24} /> : <FiMenu size={24} />}
+                        </button>
+                    </div>
 
                     {menu && (
                         <div className='fixed left-0 top-0 w-full'>

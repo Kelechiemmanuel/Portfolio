@@ -15,11 +15,48 @@ const TECH = [
     { label: "AI Int", sub: "Trending" },
 ];
 
+// One size table per breakpoint. Every pixel value the 3D scene needs
+// (wrap box, scene box, orbit rings, item chips, globe, radius, shadow)
+// lives here, so resizing the screen is just picking a different row.
+const SIZES = {
+    base: { wrap: 280, glow: 140, scene: 240, ring: 180, item: 52, radius: 95, globe: 120, shadow: 130, labelText: 8, subText: 5, centerText: 16, centerSub: 6 },
+    sm: { wrap: 340, glow: 170, scene: 300, ring: 220, item: 56, radius: 115, globe: 140, shadow: 150, labelText: 8, subText: 5, centerText: 18, centerSub: 7 },
+    md: { wrap: 440, glow: 210, scene: 380, ring: 280, item: 60, radius: 155, globe: 165, shadow: 190, labelText: 9, subText: 6, centerText: 22, centerSub: 7 },
+    lg: { wrap: 600, glow: 288, scene: 560, ring: 432, item: 64, radius: 270, globe: 208, shadow: 256, labelText: 9, subText: 6, centerText: 24, centerSub: 8 },
+};
+
+// Picks the largest breakpoint key whose min-width media query matches.
+function getBreakpoint() {
+    if (typeof window === "undefined") return "lg";
+    if (window.matchMedia("(min-width: 1024px)").matches) return "lg";
+    if (window.matchMedia("(min-width: 768px)").matches) return "md";
+    if (window.matchMedia("(min-width: 640px)").matches) return "sm";
+    return "base";
+}
+
 const HeroCubic = () => {
     const wrapRef = useRef(null);
     const [rotation, setRotation] = useState(0);
     const [tilt, setTilt] = useState({ x: 0, y: 0 });
     const [hovering, setHovering] = useState(false);
+    const [bp, setBp] = useState(getBreakpoint);
+
+    const dims = SIZES[bp];
+
+    // Re-check breakpoint on resize. matchMedia listeners (not a raw
+    // "resize" event) so this only fires when we actually cross a
+    // breakpoint boundary, not on every pixel of dragging the window.
+    useEffect(() => {
+        const queries = [
+            window.matchMedia("(min-width: 640px)"),
+            window.matchMedia("(min-width: 768px)"),
+            window.matchMedia("(min-width: 1024px)"),
+        ];
+        const update = () => setBp(getBreakpoint());
+        queries.forEach((q) => q.addEventListener("change", update));
+        update();
+        return () => queries.forEach((q) => q.removeEventListener("change", update));
+    }, []);
 
     useEffect(() => {
         let animationFrame;
@@ -61,24 +98,29 @@ const HeroCubic = () => {
     };
 
     return (
-        <div className="w-full flex justify-center items-center">
+        <div className="w-full flex justify-center items-center px-4">
 
             <div
                 ref={wrapRef}
-                className="relative w-150 h-150"
-                style={{ perspective: "1200px" }}
+                className="relative"
+                style={{ width: dims.wrap, height: dims.wrap, perspective: "1200px" }}
                 onMouseEnter={() => setHovering(true)}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
             >
 
                 {/* Ambient glow */}
-                <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full dark:bg-slate-400/20 blur-3xl bg-white/10" />
+                <div
+                    className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full dark:bg-slate-400/20 blur-3xl bg-white/10"
+                    style={{ width: dims.glow, height: dims.glow }}
+                />
 
                 {/* MAIN 3D SCENE */}
                 <div
-                    className="absolute left-1/2 top-1/2 h-140 w-140"
+                    className="absolute left-1/2 top-1/2"
                     style={{
+                        width: dims.scene,
+                        height: dims.scene,
                         transformStyle: "preserve-3d",
                         transform: `translate(-50%, -50%) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
                         transition: "transform 0.08s linear",
@@ -87,8 +129,10 @@ const HeroCubic = () => {
 
                     {/* INNER ORBIT RING */}
                     <div
-                        className="absolute left-1/2 top-1/2 h-108 w-108 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-400/20 dark:border-white/10"
+                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-400/20 dark:border-white/10"
                         style={{
+                            width: dims.ring,
+                            height: dims.ring,
                             transform: "rotateX(65deg)",
                             transformStyle: "preserve-3d",
                         }}
@@ -96,8 +140,10 @@ const HeroCubic = () => {
 
                     {/* SECOND ORBIT RING */}
                     <div
-                        className="absolute left-1/2 top-1/2 h-108 w-108 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-900/10 dark:border-white/5"
+                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-900/10 dark:border-white/5"
                         style={{
+                            width: dims.ring,
+                            height: dims.ring,
                             transform: "rotateY(65deg)",
                             transformStyle: "preserve-3d",
                         }}
@@ -105,31 +151,42 @@ const HeroCubic = () => {
 
                     {/* TECHNOLOGY ORBIT - OUTSIDE THE RINGS */}
                     <div
-                        className="absolute left-1/2 top-1/2 h-140 w-140"
+                        className="absolute left-1/2 top-1/2"
                         style={{
+                            width: dims.scene,
+                            height: dims.scene,
                             transformStyle: "preserve-3d",
                             transform: `translate(-50%, -50%) rotateY(${rotation}deg)`,
                         }}
                     >
                         {TECH.map((tech, index) => {
                             const angle = (360 / TECH.length) * index;
-                            const radius = 270;
 
                             return (
                                 <div
                                     key={tech.label}
-                                    className="absolute left-1/2 top-1/2 h-16 w-16"
+                                    className="absolute left-1/2 top-1/2"
                                     style={{
+                                        width: dims.item,
+                                        height: dims.item,
                                         transformStyle: "preserve-3d",
-                                        transform: `translate(-50%, -50%) rotateY(${angle}deg) translateZ(${radius}px)`,
+                                        transform: `translate(-50%, -50%) rotateY(${angle}deg) translateZ(${dims.radius}px)`,
                                     }}
                                 >
-                                    <div className="flex h-16 w-16 flex-col items-center justify-center rounded-full border border-slate-300/40 dark:bg-white/60 shadow-xl backdrop-blur-xl dark:border-white/20 bg-white/10">
-                                        <span className="max-w-14 text-center text-[9px] font-bold leading-tight text-slate-900 dark:text-white">
+                                    <div
+                                        className="flex h-full w-full flex-col items-center justify-center rounded-full border border-slate-300/40 dark:bg-white/60 shadow-xl backdrop-blur-xl dark:border-white/20 bg-white/10"
+                                    >
+                                        <span
+                                            className="text-center font-bold leading-tight text-slate-900 dark:text-white px-1"
+                                            style={{ fontSize: dims.labelText, maxWidth: dims.item - 8 }}
+                                        >
                                             {tech.label}
                                         </span>
 
-                                        <span className="mt-1 text-[6px] uppercase tracking-widest text-slate-500 dark:text-white/50">
+                                        <span
+                                            className="mt-1 uppercase tracking-widest text-slate-500 dark:text-white/50"
+                                            style={{ fontSize: dims.subText }}
+                                        >
                                             {tech.sub}
                                         </span>
                                     </div>
@@ -140,8 +197,10 @@ const HeroCubic = () => {
 
                     {/* STATIC CENTRAL GLOBE */}
                     <div
-                        className="absolute left-1/2 top-1/2 h-52 w-52 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full"
+                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full"
                         style={{
+                            width: dims.globe,
+                            height: dims.globe,
                             background: `
                                 radial-gradient(
                                     circle at 32% 28%,
@@ -180,11 +239,17 @@ const HeroCubic = () => {
 
                         {/* Center content */}
                         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
-                            <span className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white drop-shadow-lg">
+                            <span
+                                className="font-bold tracking-tight text-slate-900 dark:text-white drop-shadow-lg"
+                                style={{ fontSize: dims.centerText }}
+                            >
                                 AKEStack
                             </span>
 
-                            <span className="mt-1 font-mono text-[8px] uppercase text-slate-900 dark:text-white">
+                            <span
+                                className="mt-1 font-mono uppercase text-slate-900 dark:text-white"
+                                style={{ fontSize: dims.centerSub }}
+                            >
                                 your world...
                             </span>
                         </div>
@@ -194,7 +259,10 @@ const HeroCubic = () => {
                 </div>
 
                 {/* Ground shadow */}
-                <div className="absolute bottom-10 left-1/2 h-8 w-64 -translate-x-1/2 rounded-full bg-black/20 blur-xl" />
+                <div
+                    className="absolute bottom-10 left-1/2 -translate-x-1/2 rounded-full bg-black/20 blur-xl"
+                    style={{ width: dims.shadow, height: 32 }}
+                />
 
             </div>
         </div>

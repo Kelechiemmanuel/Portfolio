@@ -5,14 +5,14 @@ const Blog = () => {
     return (
         <div className='w-full'>
 
-            <div className='flex gap-5 justify-center w-full px-40 pt-60 pb-3 bg-[#f6f3ef]'>
-                <div className="group shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-[#0F172A] text-white w-[70%] p-10 rounded-2xl overflow-hidden">
+            <div className='flex flex-col md:flex-row gap-5 justify-center w-full px-10 lg:px-40 pt-30 lg:pt-60 pb-3 bg-[#f6f3ef]'>
+                <div className="group shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-[#0F172A] text-white w-full md:w-[70%] p-10 rounded-2xl overflow-hidden">
                     <div>
                         <h1 className="font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5 transition-transform duration-500 group-hover:scale-105">
                             Scan for Vuln
                         </h1>
                     </div>
-                    <div className="flex gap-10 justify-center">
+                    <div className="flex flex-col lg:flex-row gap-10 justify-center">
                         <div>
                             <p className="transition-transform duration-500 group-hover:translate-x-5">
                                 Custom engineering, not cookie-cutter development.
@@ -20,9 +20,14 @@ const Blog = () => {
                             </p>
                         </div>
 
-                        <div className="h-full w-100">
-                            <img src={Screenshot} alt="" className="rounded-xl transition-transform duration-700 group-hover:scale-110 border border-gray-300" />
+                        <div className="lg:w-1/2 w-full shrink-0 overflow-hidden rounded-xl">
+                            <img
+                                src={Screenshot}
+                                alt=""
+                                className="w-full h-auto max-w-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-110 border border-gray-300"
+                            />
                         </div>
+
 
                     </div>
 
@@ -39,19 +44,19 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex gap-5 justify-center w-full px-40 bg-[#f6f3ef] py-5'>
+            <div className='flex flex-col md:flex-row gap-5 justify-center w-full px-10 lg:px-40 bg-[#f6f3ef] py-5'>
                 <div className='shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-white rounded-xl'>
                     <div className='h-50 w-100'>
 
                     </div>
                 </div>
-                <div className="group shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-[#0F172A] text-white w-[70%] p-10 rounded-2xl overflow-hidden">
+                <div className="group shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-[#0F172A] text-white w-full md:w-[70%] p-10 rounded-2xl overflow-hidden">
                     <div>
                         <h1 className="font-medium lg:text-5xl md:text-4xl text-2xl lg:leading-15 leading-10 py-5 transition-transform duration-500 group-hover:scale-105">
                             Scan for Vuln
                         </h1>
                     </div>
-                    <div className="flex gap-10 justify-center">
+                    <div className="flex flex-col lg:flex-row gap-10 justify-center">
                         <div>
                             <p className="transition-transform duration-500 group-hover:translate-x-5">
                                 Custom engineering, not cookie-cutter development.
@@ -59,9 +64,14 @@ const Blog = () => {
                             </p>
                         </div>
 
-                        <div className="">
-                            <img src={shipment} alt="" className="w-200 rounded-xl transition-transform duration-700 group-hover:scale-110 border border-gray-300" />
+                        <div className="lg:w-1/2 w-full shrink-0 overflow-hidden rounded-xl">
+                            <img
+                                src={shipment}
+                                alt=""
+                                className="w-full h-auto max-w-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-110 border border-gray-300"
+                            />
                         </div>
+
 
                     </div>
 

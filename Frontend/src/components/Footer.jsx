@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <div className='w-full'>
-            <div className='grid grid-cols-2 px-10 py-20 lg:px-40'>
-                <div className='w-[60%]'>
+            <div className='grid grid-cols-1 md:grid-cols-2 px-10 py-20 lg:px-40'>
+                <div className='lg:w-[60%] md:w-[80%]'>
                     <div className='mb-5'>
                         <h1 className='font-bold'>A K E S T A C K</h1>
                         <div>
@@ -15,7 +15,7 @@ const Footer = () => {
                             </p>
                         </div>
                     </div>
-                    <p className='text-[14px]'>
+                    <p className='text-[14px] '>
                         A software development company that creates high-quality, reliable applications for startups that have received investment funding.
                     </p>
                 </div>
