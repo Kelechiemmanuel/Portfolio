@@ -3,7 +3,7 @@ import Screenshot from '../assets/Screenshot.png'
 
 const Blog = () => {
     return (
-        <div className='w-full'>
+        <div className=''>
 
             <div className='flex flex-col md:flex-row gap-5 justify-center w-full px-10 lg:px-40 pt-30 lg:pt-60 pb-3 bg-[#f6f3ef]'>
                 <div className="group shadow-[0_0_15px_rgba(0,0,0,0.15)] bg-[#0F172A] text-white w-full md:w-[70%] p-10 rounded-2xl overflow-hidden">
